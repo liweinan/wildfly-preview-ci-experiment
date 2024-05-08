@@ -11,4 +11,6 @@ The `wildfly-preview` build used as provisioned server:
 
 ## To Do
 
-Add `pom.xml` to use the WildFly Preview build for testing.
+- Add `pom.xml` to use the WildFly Preview build for testing.
+- Add `use-wildfly-preview` profile.
+- Run the above profile in CI.
