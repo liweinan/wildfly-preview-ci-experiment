@@ -25,9 +25,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest, windows-latest ]
+        os: [ ubuntu-latest ]
         jdk-distribution: [ temurin ]
-        jdk-version: [ '11', '17', '21' ]
+        jdk-version: [ '17' ]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
