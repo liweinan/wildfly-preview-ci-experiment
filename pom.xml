@@ -35,7 +35,6 @@
 
     <properties>
         <jboss.home>${project.build.directory}${file.separator}wildfly</jboss.home>
-<!--        todo: use the built wildfly main branch:-->
         <version.org.wildfly>30.0.1.Final</version.org.wildfly>
         <galleon.fork.embedded>true</galleon.fork.embedded>
         <version.wildfly-maven-plugin>5.0.0.Final</version.wildfly-maven-plugin>
