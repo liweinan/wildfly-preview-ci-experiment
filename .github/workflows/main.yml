@@ -49,4 +49,4 @@ jobs:
           cache: 'maven'
       - name: Build With Provisioned WildFly
         run: |
-          mvn clean install '-Dversion.org.wildfly=${{needs.wildfly-build.outputs.wildfly-version}}' '-Dversion.wildfly-maven-plugin=5.0.0.Final' '-Pprovision-preview'
+          mvn clean install '-Dversion.org.wildfly=100' '-Dversion.wildfly-maven-plugin=5.0.0.Final' '-Pprovision-preview'
