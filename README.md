@@ -9,6 +9,22 @@ The `wildfly-preview` build used as provisioned server:
 - https://github.com/resteasy/resteasy/blob/5f35958f88ac5c20aa3b2b646d91af02d7664ea6/testsuite/integration-tests/pom.xml#L58-L104
 - https://github.com/resteasy/resteasy/blob/5f35958f88ac5c20aa3b2b646d91af02d7664ea6/testsuite/integration-tests/pom.xml#L108-L124
 
+The build that is using the main branch of WildFly:
+
+- https://github.com/liweinan/wildfly-preview-ci-experiment/actions/runs/9020147535/job/24784827116#step:6:2
+
+```bash
+Run mvn install '-Dversion.org.wildfly=33.0.0.Beta1-SNAPSHOT' '-Dversion.wildfly-maven-plugin=5.0.0.Final'
+```
+
+- https://github.com/liweinan/wildfly-preview-ci-experiment/actions/runs/9020147535/job/24784827116#step:6:35
+
+```bash
+[INFO] Building wildfly-preview-ci-experiment 44
+```
+
+---
+
 ## To Do
 
 - Add `pom.xml` to use the WildFly Preview build for testing.
