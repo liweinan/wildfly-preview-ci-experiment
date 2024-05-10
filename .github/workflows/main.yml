@@ -41,3 +41,12 @@ jobs:
           tar xvzf wildfly-maven-repository.tar.gz -C ~
           pwd
           find .
+      - name: Set up JDK ${{ matrix.jdk-distribution }} ${{ matrix.jdk-version }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ matrix.jdk-version }}
+          distribution: ${{ matrix.jdk-distribution }}
+#          cache: 'maven'
+      - name: Build With Provisioned WildFly
+        run: |
+          mvn clean install '-Dversion.org.wildfly=${{needs.wildfly-build.outputs.wildfly-version}}' '-Dversion.wildfly-maven-plugin=5.0.0.Final' '-Pprovision-preview'

@@ -38,6 +38,8 @@
         <version.org.wildfly>30.0.1.Final</version.org.wildfly>
         <galleon.fork.embedded>true</galleon.fork.embedded>
         <version.wildfly-maven-plugin>5.0.0.Final</version.wildfly-maven-plugin>
+        <server.test.feature.pack.groupId>org.wildfly</server.test.feature.pack.groupId>
+        <server.test.feature.pack.artifactId>wildfly-ee-galleon-pack</server.test.feature.pack.artifactId>
     </properties>
 
     <dependencies>
@@ -74,6 +76,18 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>provision-preview</id>
+<!--            <activation>-->
+<!--                <property>-->
+<!--                    <name>provision.preview</name>-->
+<!--                </property>-->
+<!--            </activation>-->
+            <properties>
+                <server.test.feature.pack.groupId>org.wildfly</server.test.feature.pack.groupId>
+                <server.test.feature.pack.artifactId>wildfly-preview-feature-pack</server.test.feature.pack.artifactId>
+            </properties>
+        </profile>
     </profiles>
 
 
@@ -104,8 +118,8 @@
                             </galleon-options>
                             <feature-packs>
                                 <feature-pack>
-                                    <groupId>org.wildfly</groupId>
-                                    <artifactId>wildfly-ee-galleon-pack</artifactId>
+                                    <groupId>${server.test.feature.pack.groupId}</groupId>
+                                    <artifactId>${server.test.feature.pack.artifactId}</artifactId>
                                     <version>${version.org.wildfly}</version>
                                     <inherit-configs>false</inherit-configs>
                                     <included-configs>
@@ -144,6 +158,7 @@
                             <goal>deploy</goal>
                         </goals>
                         <configuration>
+                            <jboss-home>${jboss.home}</jboss-home>
                             <filename>test-deployment.war</filename>
                         </configuration>
                     </execution>
