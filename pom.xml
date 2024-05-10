@@ -104,6 +104,9 @@
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>${version.wildfly-maven-plugin}</version>
+                <configuration>
+                    <jboss-home>${jboss.home}</jboss-home>
+                </configuration>
                 <executions>
                     <execution>
                         <id>server-provisioning</id>
@@ -158,7 +161,6 @@
                             <goal>deploy</goal>
                         </goals>
                         <configuration>
-                            <jboss-home>${jboss.home}</jboss-home>
                             <filename>test-deployment.war</filename>
                         </configuration>
                     </execution>
