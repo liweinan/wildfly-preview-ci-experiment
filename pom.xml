@@ -158,6 +158,7 @@
                             <goal>deploy</goal>
                         </goals>
                         <configuration>
+                            <jboss-home>${jboss.home}</jboss-home>
                             <filename>test-deployment.war</filename>
                         </configuration>
                     </execution>

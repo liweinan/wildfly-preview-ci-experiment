@@ -51,3 +51,8 @@ Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/wildfl
 
 Please note the `clean` phase must be run in case the cache is used.
 
+Run with customized parameters:
+
+```bash
+➤ mvn clean install '-Dversion.org.wildfly=33.0.0.Beta1-SNAPSHOT' '-Dversion.wildfly-maven-plugin=5.0.0.Final' '-Pprovision-preview'
+```
