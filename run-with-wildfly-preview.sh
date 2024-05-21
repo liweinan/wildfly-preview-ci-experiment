@@ -17,7 +17,7 @@ jberet_ver=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
 popd
 
 mvn clean install \
-  '-Dversion.org.wildfly=${{needs.wildfly-build.outputs.wildfly-version}}' \
+  "-Dversion.org.wildfly=${WILDFLY_VER}" \
   '-Dversion.wildfly-maven-plugin=5.0.0.Final' \
   "-Dversion.jberet=${jberet_ver}" \
   '-Pprovision-preview'
