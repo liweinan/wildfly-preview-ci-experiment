@@ -105,6 +105,7 @@
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>${version.wildfly-maven-plugin}</version>
+<!--                This must be put here for the configuration can be used in every execution.-->
                 <configuration>
                     <jboss-home>${jboss.home}</jboss-home>
                 </configuration>
