@@ -27,7 +27,7 @@
     <parent>
         <groupId>org.jboss</groupId>
         <artifactId>jboss-parent</artifactId>
-        <version>49</version>
+        <version>50</version>
     </parent>
 
     <artifactId>wildfly-preview-ci-experiment</artifactId>
